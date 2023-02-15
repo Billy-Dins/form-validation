@@ -8,6 +8,23 @@
     <title>Form validation</title>
 </head>
 <body>
-    
+    <form id="browser-form" novalidate>
+        <fieldset>
+            <legend>Form</legend>
+            <label for="email">email</label>
+            <input id="email" type="email" name="email" minlength="7">
+            <div id="emailError"></div>
+            <label for="country">country</label>
+            <input id="country" type="text" name="country">
+            <div id="countryError"></div>
+            <label for="zip">zip</label>
+            <input id="zip" type="text" name="zip">
+            <div id="zipError"></div>
+            <label for="password">password</label>
+            <input id="password" type="password" name="password">
+            <div id="passwordError"></div>
+            <button id="submit-btn">submit</button>
+        </fieldset>
+    </form>
 </body>
 </html>

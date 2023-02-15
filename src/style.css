@@ -1,0 +1,8 @@
+form {
+}
+#email, #country, #zip, #password {
+    display: block;
+}
+#emailError {
+    background-color: red;
+}
