@@ -1,7 +1,18 @@
 form {
+    width: 200px;
 }
 #email, #country, #zip, #password {
     display: block;
+}
+input:invalid {
+    border: 1px solid red;
+}
+input:focus {
+    border: none;
+    border: 5px solid yellow
+}
+input:valid {
+    border: 1px solid green;
 }
 #emailError {
     background-color: red;

@@ -12,16 +12,16 @@
         <fieldset>
             <legend>Form</legend>
             <label for="email">email</label>
-            <input id="email" type="email" name="email" minlength="7">
+            <input id="email" type="email" name="email" minlength="7" required>
             <div id="emailError"></div>
             <label for="country">country</label>
-            <input id="country" type="text" name="country" minlength="4">
+            <input id="country" type="text" name="country" minlength="4" required>
             <div id="countryError"></div>
             <label for="postal">Postal code</label>
-            <input id="zip" type="text" name="postal" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]">
+            <input id="zip" type="text" name="postal" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" required>
             <div id="zipError"></div>
             <label for="password">password</label>
-            <input id="password" type="password" name="password">
+            <input id="password" type="password" name="password" required>
             <div id="passwordError"></div>
             <button id="submit-btn">submit</button>
         </fieldset>
