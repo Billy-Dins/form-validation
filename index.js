@@ -1,6 +1,8 @@
 import style from './src/style.css'
 
 const form = document.querySelector('#browser-form')
+const formButton = document.querySelector('#submit-btn')
+const formError = document.querySelector('#form-error')
 const emailInput = document.querySelector('#email')
 const emailError = document.querySelector('#emailError')
 const countryInput = document.querySelector('#country')
@@ -23,7 +25,22 @@ function showError(input, error) {
     error.className = 'error active'
 }
 
+formButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    if (form.checkValidity()) {
+        formError.textContent = 'mission success';
+        formError.className = 'error'
+    } else {
+        showFormError();
+    }
+})
+
+function showFormError() {
+    formError.textContent = "form filled out incorrectly, please try again"
+}
+
 emailInput.addEventListener('input', (event) => {
+    formError.textContent = ''
     if (emailInput.validity.valid) {
         emailError.textContent = '';
         emailError.className = 'error'
@@ -33,6 +50,7 @@ emailInput.addEventListener('input', (event) => {
 })
 
 countryInput.addEventListener('input', (event) => {
+    formError.textContent = ''
     if (countryInput.validity.valid) {
         countryError.textContent = '';
         countryError.className = 'error';
@@ -42,6 +60,7 @@ countryInput.addEventListener('input', (event) => {
 })
 
 zipInput.addEventListener('input', (event) => {
+    formError.textContent = ''
     if (zipInput.validity.valid) {
         zipError.textContent = '';
         zipError.className = 'error'
@@ -51,6 +70,7 @@ zipInput.addEventListener('input', (event) => {
 })
 
 passwordInput.addEventListener('input', (event) => {
+    formError.textContent = ''
     if (passwordInput.validity.valid) {
         passwordError.textContent = '';
         passwordError.className = 'error'
